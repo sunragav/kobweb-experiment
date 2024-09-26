@@ -6,6 +6,7 @@
   <meta content="Powered by Kobweb" name="description">
   <link href="/favicon.ico" rel="icon">
   <meta content="width=device-width, initial-scale=1" name="viewport">
+  <script src="/script.js"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
  </head>
  <body>
@@ -16,7 +17,7 @@
    <style>@layer reset, kobweb-compose, base, component-styles, component-variants, restricted-styles, general-styles;@media not all and (min-width: 0px) {  .silk-display-if-at-least-zero { display: none !important; }}@media (min-width: 0px) {  .silk-display-until-zero { display: none !important; }}@media not all and (min-width: 30rem) {  .silk-display-if-at-least-sm { display: none !important; }}@media (min-width: 30rem) {  .silk-display-until-sm { display: none !important; }}@media not all and (min-width: 48rem) {  .silk-display-if-at-least-md { display: none !important; }}@media (min-width: 48rem) {  .silk-display-until-md { display: none !important; }}@media not all and (min-width: 62rem) {  .silk-display-if-at-least-lg { display: none !important; }}@media (min-width: 62rem) {  .silk-display-until-lg { display: none !important; }}@media not all and (min-width: 80rem) {  .silk-display-if-at-least-xl { display: none !important; }}@media (min-width: 80rem) {  .silk-display-until-xl { display: none !important; }}</style>
    <div class="silk-surface silk-smooth-color kobweb-box kobweb-align-top-start" style="min-height: 100vh;">
     <div class="kobweb-box kobweb-align-center" style="width: 100%; height: 100%;">
-     <button class="silk-button silk-button-size_md" type="button">
+     <button class="silk-button silk-button-size_md" onclick="invokeClick()" type="button">
       <div class="kobweb-row kobweb-arrange-center kobweb-align-center-vert">
        Click me!
       </div></button>
@@ -24,5 +25,9 @@
    </div>
   </div>
   <script src="/flutterwebview.js"></script>
+  <script>function invokeClick() {
+    console.log(" MessageInvoker.postMessage('clicked')")
+    MessageInvoker.postMessage('clicked')
+}</script>
  </body>
 </html>
