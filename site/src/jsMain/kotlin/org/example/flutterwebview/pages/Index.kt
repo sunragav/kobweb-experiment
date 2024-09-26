@@ -9,7 +9,9 @@ import com.varabyte.kobweb.core.Page
 import com.varabyte.kobweb.silk.components.forms.Button
 import org.jetbrains.compose.web.dom.Text
 
-external fun invokeClick()
+fun invokeClick(){
+    js("MessageInvoker.invokeClick('clicked')")
+}
 
 @Page
 @Composable
